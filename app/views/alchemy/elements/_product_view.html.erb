@@ -1,0 +1,13 @@
+<%= stylesheet_link_tag "bootstrap" %>
+<div class="container-fluid product" id="<%= element_dom_id(element) %>"<%= element_preview_code(element) -%>>
+  <div class="row-fluid">
+    <div class="span2">
+   		<h4 align="center"><%= link_to truncate(element.ingredient('spree_product').name, :length => 50) %></h4>
+    	<%= image_tag element.ingredient('spree_product').images.first.attachment.url %>
+    </div>
+    <div class="span10">
+    	<%= number_to_currency element.ingredient('spree_product').price %> 
+    	<%= element.ingredient('spree_product').description %>
+    </div>
+  </div>
+</div>
