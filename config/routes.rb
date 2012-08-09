@@ -8,10 +8,11 @@ Killingspree::Application.routes.draw do
   mount Spree::Core::Engine, :at => '/shop'
   mount Alchemy::Engine => '/'
 
-  
+  resources :products
   get '/login', :to => "user_sessions#login"
   get '/signup', :to => "user_sessions#login"
   delete '/logout', :to => "user_sessions#logout"
+
           # The priority is based upon order of creation:
   # first created -> highest priority.
 

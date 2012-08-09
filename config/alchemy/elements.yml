@@ -2,6 +2,10 @@
   contents:
   - name: spree_product
     type: EssenceSpreeProduct
+- name: taxons
+  contents:
+  - name: spree_taxon
+    type: EssenceSpreeTaxon
 # == In this configuration you setup Alchemy´s element layouts.
 # 
 # Use rails generate alchemy:scaffold to generate this file for your app.

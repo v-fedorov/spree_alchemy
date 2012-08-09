@@ -32,6 +32,6 @@
   unique: true
   elements: []
 - name: products
-  elements: [product]
+  elements: [product, taxons]
 - name: list
   elements: [product]

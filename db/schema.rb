@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120803205850) do
+ActiveRecord::Schema.define(:version => 20120808204801) do
 
   create_table "alchemy_attachments", :force => true do |t|
     t.string   "name"
@@ -170,6 +170,12 @@ ActiveRecord::Schema.define(:version => 20120803205850) do
   end
 
   add_index "alchemy_essence_spree_products", ["spree_product_id"], :name => "index_alchemy_essence_spree_products_on_spree_product_id"
+
+  create_table "alchemy_essence_spree_taxons", :force => true do |t|
+    t.integer "spree_taxon_id"
+  end
+
+  add_index "alchemy_essence_spree_taxons", ["spree_taxon_id"], :name => "index_alchemy_essence_spree_taxons_on_spree_taxon_id"
 
   create_table "alchemy_essence_texts", :force => true do |t|
     t.text     "body"
