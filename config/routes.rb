@@ -13,6 +13,8 @@ Killingspree::Application.routes.draw do
   get '/signup', :to => "user_sessions#login"
   delete '/logout', :to => "user_sessions#logout"
 
+
+
           # The priority is based upon order of creation:
   # first created -> highest priority.
 
