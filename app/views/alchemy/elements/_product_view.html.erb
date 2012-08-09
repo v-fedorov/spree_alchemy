@@ -1,18 +1,21 @@
 <%= stylesheet_link_tag "bootstrap" %>
 <div class="container-fluid product" id="<%= element_dom_id(element) %>"<%= element_preview_code(element) -%>>
 	<table class="table">
+	 <%- product = element.ingredient('spree_product') -%>
+  		<%- if !product.blank? -%>
 		  <thead>
 		    <tr>
-		      <th style="text-align:center"><%= link_to element.ingredient('spree_product').name, spree.product_path(element.ingredient('spree_product')) %></th>
+		      <th style="text-align:center"><%= link_to product.name, spree.product_path(product) %></th>
 		    </tr>
 		  </thead>
 		  <tbody>
 		    <tr>
-		      <td style="text-align:center"><%= link_to image_tag(element.ingredient('spree_product').images.first.attachment.url(:small)), spree.product_path(element.ingredient('spree_product')) %></td>
+		      <td style="text-align:center"><%= link_to image_tag(product.images.first.attachment.url(:small)), spree.product_path(product) %></td>
 		    </tr>
 		    <tr>
-		      <td style="text-align:center"><%= element.ingredient('spree_product').price %></td>
+		      <td style="text-align:center"><%= product.price %></td>
 		    </tr>
 		  </tbody>
+		<% end %>
 	</table>
 </div>

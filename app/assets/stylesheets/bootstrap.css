@@ -71,6 +71,7 @@ img {
   vertical-align: middle;
   border: 0;
   -ms-interpolation-mode: bicubic;
+  display: inline-block !important;
 }
 
 #map_canvas img {
@@ -167,6 +168,7 @@ body {
 a {
   color: #0088cc;
   text-decoration: none;
+  background-color: #fff !important;
 }
 
 a:hover {
@@ -1527,9 +1529,8 @@ table {
 .table td {
   padding: 8px;
   line-height: 18px;
-  text-align: left;
+  text-align: center !important;
   vertical-align: top;
-  border-top: 1px solid #dddddd;
 }
 
 .table th {
